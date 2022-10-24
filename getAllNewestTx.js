@@ -38,6 +38,7 @@ const getAllEventInTimeRange = async (timeRange) => {
     return data.result;
 }
 
+//timeRange is in second. Filter all the action happened from (now-timeRange) to (now)
 const filterAllActionDataInTimeRange = async (timeRange) => {
     const typesStakeEvent = [
         {type: 'address', name: 'staker'}, 
@@ -86,4 +87,4 @@ const filterAllActionDataInTimeRange = async (timeRange) => {
     return res;
 }
 
-filterAllActionDataInTimeRange(100000);
+// filterAllActionDataInTimeRange(100000);
